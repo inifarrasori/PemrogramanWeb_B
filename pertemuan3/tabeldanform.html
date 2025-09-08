@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabel, Form, dan Frame</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center; 
+                align-items: center;     
+                height: 100vh;
+                margin: 0;
+                flex-direction: column;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px; 
+            }            
+            .main, .form{
+                border-radius: 15px;
+                padding: 30px;
+                background-color: antiquewhite;
+                width: 400px;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+                margin-bottom: 20px;
+                justify-content: center;
+                align-items: stretch;
+                display: flex;
+                flex-direction: column;
+            }
+            table{
+                align-items: center;
+                background-color: whitesmoke;
+            }
+            label{
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            select{
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+
+            }
+            button[type="submit"],
+            button[type=reset] {
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+        <caption align="top"> <b>Data Mahasiswa</b></caption>
+        <table border="2">
+            <tr><th rowspan="2">No</th><th rowspan="2">NRP</th><th rowspan="2">Nama</th><th colspan="2">Nilai</th></tr>
+            <tr><th>UTS</th><th>UAS</th></tr>
+            <tr><td>1.</td><td width="100" align="center">5025241090</td><td width="200">Willy Dava</td><td align="center">90</td><td align="center">95</td></tr>
+            <tr><td>2.</td><td width="100" align="center">5025241091</td><td width="200">Farras Abdurrazaq</td><td align="center">85</td><td align="center">90</td></tr>
+            <tr><td>3.</td><td width="100" align="center">5025241093</td><td width="200">Nyoman Surya</td><td align="center">90</td><td align="center">100</td></tr>
+        </table>
+        </div>
+        <div class="form">
+        <form method="post">
+                <label>First Name:</label>
+                <input type="text" name="FirstName">
+                <label>Last Name:</label>
+                <input type="text" name="LastName" >
+                <label>Email:</label>
+                <input type="email" name="Email" >
+                <label>Password</label>
+                <input type="password" name="Password">
+                <label>Retype Password</label>
+                <input type="password" name="RePassword">
+                <label>Contact</label>
+                <input type="text" name="Contact">
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <button type="submit">
+                    Submit
+                </button>
+                <button type="reset">
+                    Reset
+                </button>
+        </form>
+        </div>
+    </body>
+</html>
